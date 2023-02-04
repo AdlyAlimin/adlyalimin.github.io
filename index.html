@@ -14,6 +14,18 @@
         .revealOnScroll {
             opacity: 0;
         }
+
+        div.butterfly {
+            width: 50px;
+            height: 50px;
+            position: fixed;
+        }
+
+        div.butterfly2 {
+            width: 50px;
+            height: 50px;
+            position: fixed;
+        }
     </style>
 </head>
 
@@ -28,6 +40,14 @@
         <section class="pt-0 pb-0" id="home">
             <img class="animate__animated animate__fadeInUp animate__slower" src="assets/images/banner.png"
                 style="height: 100%; width: 100%;" alt="">
+            <div class='butterfly'>
+                <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/ecd6b3ae-5f23-4773-aa4c-a5ff163d09f1/ddapzle-c7909979-452f-44b2-a03e-d206fcf49d3b.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2VjZDZiM2FlLTVmMjMtNDc3My1hYTRjLWE1ZmYxNjNkMDlmMVwvZGRhcHpsZS1jNzkwOTk3OS00NTJmLTQ0YjItYTAzZS1kMjA2ZmNmNDlkM2IuZ2lmIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.tUW28NtzW4-4x1_ajMeVKUJT3nYgSTbSlnW4u_n6xTo"
+                    alt="butterfly" height="50px">
+            </div>
+            <div class='butterfly2'>
+                <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/ecd6b3ae-5f23-4773-aa4c-a5ff163d09f1/ddapzle-c7909979-452f-44b2-a03e-d206fcf49d3b.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2VjZDZiM2FlLTVmMjMtNDc3My1hYTRjLWE1ZmYxNjNkMDlmMVwvZGRhcHpsZS1jNzkwOTk3OS00NTJmLTQ0YjItYTAzZS1kMjA2ZmNmNDlkM2IuZ2lmIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.tUW28NtzW4-4x1_ajMeVKUJT3nYgSTbSlnW4u_n6xTo"
+                    alt="butterfly" height="50px">
+            </div>
         </section>
 
         <section class="first-ico-box pb-0" style="padding-top: 10px;" id="who">
@@ -72,7 +92,8 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-md-3 text-center col-sm-6">
-                        <h2 class="white-color font-700 revealOnScroll" data-animation="animate__fadeInRightBig">Sabtu</h2>
+                        <h2 class="white-color font-700 revealOnScroll" data-animation="animate__fadeInRightBig">Sabtu
+                        </h2>
                     </div>
                     <div class="col-md-3 text-center col-sm-6">
                         <h2 class="white-color font-700 revealOnScroll" data-animation="animate__fadeInLeftBig"
@@ -217,6 +238,32 @@
 
             revealOnScroll();
         });
+
+        $(document).ready(function () {
+            animateDiv('.butterfly');
+            animateDiv('.butterfly2');
+        });
+
+        function makeNewPosition() {
+
+            // Get viewport dimensions (remove the dimension of the div)
+            var h = $(window).height() - 50;
+            var w = $(window).width() - 50;
+
+            var nh = Math.floor(Math.random() * h);
+            var nw = Math.floor(Math.random() * w);
+
+            return [nh, nw];
+
+        }
+
+        function animateDiv(myclass) {
+            var newq = makeNewPosition();
+            $(myclass).animate({ top: newq[0], left: newq[1] }, 5000, function () {
+                animateDiv(myclass);
+            });
+
+        };
     </script>
 
 </body>
