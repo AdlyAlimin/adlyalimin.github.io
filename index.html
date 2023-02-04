@@ -19,47 +19,47 @@
 <body>
     <div class="wrapper scroll__container">
 
-        <section class="pt-0 pb-0 revealOnScroll" data-animation="fadeInUp" style="height: 100vh;" id="home">
+        <section class="pt-0 pb-0" style="height: 100vh;" id="home">
             <img class="animate__animated animate__fadeInUp animate__slower" src="assets/images/banner.png"
                 style="height: 100%;" alt="">
         </section>
 
-        <section class="first-ico-box pb-0 revealOnScroll" data-animation="fadeInUp" id="who">
+        <section class="first-ico-box pb-0" id="who">
             <div class="container">
                 <div class="row">
                     <div class="col-sm-8 section-heading">
-                        <h4 class="text-uppercase">Walimatu Urus</h4>
-                        <h2 class="text-uppercase source-font">Jamil Bin Mat Hussin</h2>
-                        <h4 class="text-uppercase source-font">&</h4>
-                        <h2 class="text-uppercase source-font">Noraziah Binti Abdul Wahab</h2>
-                        <div class="mt-30">
+                        <h4 class="text-uppercase revealOnScroll" data-animation="animate__fadeInUp">Walimatu Urus</h4>
+                        <h2 class="text-uppercase source-font revealOnScroll" data-animation="animate__fadeInLeft">Jamil Bin Mat Hussin</h2>
+                        <h4 class="text-uppercase source-font revealOnScroll" data-animation="animate__fadeIn">&</h4>
+                        <h2 class="text-uppercase source-font revealOnScroll" data-animation="animate__fadeInRight">Noraziah Binti Abdul Wahab</h2>
+                        <div class="mt-30 revealOnScroll" data-animation="animate__bounceIn">
                             <p>Dengan penuh kesyukuran dan segala hormatnya kami menjemput
                                 dan mempersilakan
                                 Tan Sri/Puan Sri/Dato`/Datin/Tuan/Puan/Encik/Cik </p>
                         </div>
                         <br>
-                        <h2 class="text-uppercase source-font">Sofiah binti Jamil</h2>
-                        <h4 class="text-uppercase source-font">&</h4>
-                        <h2 class="text-uppercase source-font">Mohammad Adly bin Alimin</h2>
+                        <h2 class="text-uppercase source-font revealOnScroll" data-animation="animate__fadeInDown">Sofiah binti Jamil</h2>
+                        <h4 class="text-uppercase source-font revealOnScroll" data-animation="animate__fadeIn">&</h4>
+                        <h2 class="text-uppercase source-font revealOnScroll" data-animation="animate__fadeInUp">Mohammad Adly bin Alimin</h2>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="dark-bg pb-80 revealOnScroll" data-animation="fadeInUp">
+        <section class="dark-bg pb-80 revealOnScroll" data-animation="animate__fadeInUp">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-md-3 text-center col-sm-6">
-                        <h2 class="white-color font-700">Sabtu</h2>
+                        <h2 class="white-color font-700 revealOnScroll" data-animation="animate__fadeInRightBig" data-timeout="800">Sabtu</h2>
                     </div>
                     <div class="col-md-3 text-center col-sm-6">
-                        <h2 class="white-color font-700">11</h2>
+                        <h2 class="white-color font-700 revealOnScroll" data-animation="animate__fadeInLeftBig" data-timeout="1400">11</h2>
                     </div>
                     <div class="col-md-3 text-center col-sm-6">
-                        <h2 class="white-color font-700">Mac</h2>
+                        <h2 class="white-color font-700 revealOnScroll" data-animation="animate__fadeInRightBig" data-timeout="2200">Mac</h2>
                     </div>
                     <div class="col-md-3 text-center col-sm-6">
-                        <h2 class="white-color font-700">2023</h2>
+                        <h2 class="white-color font-700 revealOnScroll" data-animation="animate__fadeInUpBig" data-timeout="3000">2023</h2>
                     </div>
                 </div>
             </div>
@@ -145,14 +145,14 @@
     <script src="assets/js/master.js"></script>
     <script src="assets/js/bootsnav.js"></script>
     <!--=== Javascript Plugins End ===-->
-    <script src="https://ajax.aspnetcdn.com/ajax/modernizr/modernizr-2.7.2.js"></script>
+    <!-- <script src="https://ajax.aspnetcdn.com/ajax/modernizr/modernizr-2.7.2.js"></script> -->
     <script>
         $(function () {
                 var $window = $(window),
                     win_height_padded = $window.height() * 1.1,
                     isTouch = Modernizr.touch;
 
-                if (isTouch) { $('.revealOnScroll').addClass('animated'); }
+                if (isTouch) { $('.revealOnScroll').addClass('animate__animated'); }
 
                 $window.on('scroll', revealOnScroll);
 
@@ -161,26 +161,26 @@
                         win_height_padded = $window.height() * 1.1;
 
                     // Showed...
-                    $(".revealOnScroll:not(.animated)").each(function () {
+                    $(".revealOnScroll:not(.animate__animated)").each(function () {
                         var $this = $(this),
                             offsetTop = $this.offset().top;
 
                         if (scrolled + win_height_padded > offsetTop) {
                             if ($this.data('timeout')) {
                                 window.setTimeout(function () {
-                                    $this.addClass('animated ' + $this.data('animation'));
+                                    $this.addClass('animate__animated ' + $this.data('animation'));
                                 }, parseInt($this.data('timeout'), 10));
                             } else {
-                                $this.addClass('animated ' + $this.data('animation'));
+                                $this.addClass('animate__animated ' + $this.data('animation'));
                             }
                         }
                     });
                     // Hidden...
-                    $(".revealOnScroll.animated").each(function (index) {
+                    $(".revealOnScroll.animate__animated").each(function (index) {
                         var $this = $(this),
                             offsetTop = $this.offset().top;
                         if (scrolled + win_height_padded < offsetTop) {
-                            $(this).removeClass('animated fadeInUp flipInX lightSpeedIn')
+                            $(this).removeClass('animate__animated fadeInUp flipInX lightSpeedIn')
                         }
                     });
                 }
