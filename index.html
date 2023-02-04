@@ -1,33 +1,181 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
-  <meta name="description" content="A new Flutter project.">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Sofiah dan Adly</title>
+    <link rel="shortcut icon" href="assets/images/favicon.ico">
+    <link rel="stylesheet" href="assets/css/master.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 
-  <!-- iOS meta tags & icons -->
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="apple-mobile-web-app-title" content="firstwebapp">
-  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+    <style>
+        .reveal {
+            position: relative;
+            transform: translateY(150px);
+            opacity: 0;
+            transition: 1s all ease;
+        }
 
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="favicon.png"/>
-
-  <title>firstwebapp</title>
-  <link rel="manifest" href="manifest.json">
+        .reveal.active {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    </style>
 </head>
+
 <body>
-  <!-- This script installs service_worker.js to provide PWA functionality to
-       application. For more information, see:
-       https://developers.google.com/web/fundamentals/primers/service-workers -->
-  <script>
-    if ('serviceWorker' in navigator) {
-      window.addEventListener('load', function () {
-        navigator.serviceWorker.register('flutter_service_worker.js');
-      });
-    }
-  </script>
-  <script src="main.dart.js" type="application/javascript"></script>
+    <div class="wrapper scroll__container">
+
+        <section class="pt-0 pb-0" style="height: 100vh;" id="home">
+            <img class="animate__animated animate__fadeInUp animate__slower" src="assets/images/banner.png"
+                style="height: 100%;" alt="">
+        </section>
+
+        <section class="first-ico-box pb-0 reveal" style="min-height: 30vh;" id="who">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-8 section-heading">
+                        <h4 class="text-uppercase">Walimatu Urus</h4>
+                        <h2 class="text-uppercase source-font">Jamil Bin Mat Hussin</h2>
+                        <h4 class="text-uppercase source-font">&</h4>
+                        <h2 class="text-uppercase source-font">Noraziah Binti Abdul Wahab</h2>
+                        <div class="mt-30">
+                            <p>Dengan penuh kesyukuran dan segala hormatnya kami menjemput
+                                dan mempersilakan
+                                Tan Sri/Puan Sri/Dato`/Datin/Tuan/Puan/Encik/Cik </p>
+                        </div>
+                        <br>
+                        <h2 class="text-uppercase source-font">Sofiah binti Jamil</h2>
+                        <h4 class="text-uppercase source-font">&</h4>
+                        <h2 class="text-uppercase source-font">Mohammad Adly bin Alimin</h2>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="dark-bg pb-80 reveal" style="min-height: 30vh;">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-3 text-center col-sm-6">
+                        <h2 class="white-color font-700">Sabtu</h2>
+                    </div>
+                    <div class="col-md-3 text-center col-sm-6">
+                        <h2 class="white-color font-700">11</h2>
+                    </div>
+                    <div class="col-md-3 text-center col-sm-6">
+                        <h2 class="white-color font-700">Mac</h2>
+                    </div>
+                    <div class="col-md-3 text-center col-sm-6">
+                        <h2 class="white-color font-700">2023</h2>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="first-ico-box pb-0 reveal" id="who" style="min-height: 30vh; padding-top: 20px;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-8 section-heading">
+                        <h4 class="text-uppercase">Lokasi majlis</h4>
+                        <h2 class="text-uppercase source-font">No 9, Jln 4, Tmn Sri Menegon 41000 Klang Selangor Darul
+                            Ehsan</h2>
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1204.8706338173065!2d101.47516382922275!3d3.0290523390932793!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x2b4ea9fc26225429!2zM8KwMDEnNDQuNiJOIDEwMcKwMjgnMzIuNiJF!5e1!3m2!1sen!2smy!4v1675497292985!5m2!1sen!2smy"
+                            width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <div class="mt-30">
+                            <a class="button" href="https://goo.gl/maps/NkZvtJqaYmR9XYkv5">Klik Untuk ke Lokasi
+                                Majlis</a>
+                        </div>
+                        <h4 class="text-uppercase" style="margin-top: 30px;">Atucara majlis</h4>
+                        <div style="margin-top: 10px;">
+                            <p>11:00 Pagi - Kehadiran Tetamu</p>
+                            <p> 12:00 Tgh Hari - Ketibaan Pengantin</p>
+                            <p> 5:00 Ptg - Bersurai</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="reveal" id="testimonial" style="min-height: 30vh; padding-top: 20px;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-8 section-heading">
+                        <h2 class="text-uppercase">Hubungi</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="slick testimonial">
+                            <!--=== Slide ===-->
+                            <div class="testimonial-item">
+                                <div class="testimonial-content" style="padding-top: 10px; padding-bottom: 10px;">
+                                    <h5>Jamil</h5>
+                                    <p>010 - 2213725</p>
+                                </div>
+                            </div>
+                            <!--=== Slide ===-->
+                            <div class="testimonial-item">
+                                <div class="testimonial-content" style="padding-top: 10px; padding-bottom: 10px;">
+                                    <h5>Luqman</h5>
+                                    <p>013 - 6761378</p>
+                                </div>
+                            </div>
+                            <!--=== Slide ===-->
+                            <div class="testimonial-item">
+                                <div class="testimonial-content" style="padding-top: 10px; padding-bottom: 10px;">
+                                    <h5>Nurul</h5>
+                                    <p>019 - 6633008</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--=== Testimonails End ===-->
+
+
+        <!--=== GO TO TOP  ===-->
+        <a href="#" id="back-to-top" title="Back to top">&uarr;</a>
+        <!--=== GO TO TOP End ===-->
+
+    </div>
+    <!--=== Wrapper End ===-->
+
+    <!--=== Javascript Plugins ===-->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/smoothscroll.js"></script>
+    <script src="assets/js/validator.js"></script>
+    <script src="assets/js/plugins.js"></script>
+    <script src="assets/js/master.js"></script>
+    <script src="assets/js/bootsnav.js"></script>
+    <!--=== Javascript Plugins End ===-->
+
+    <script>
+        function reveal() {
+            var reveals = document.querySelectorAll(".reveal");
+
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var elementVisible = 80;
+
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add("active");
+                } else {
+                    reveals[i].classList.remove("active");
+                }
+            }
+        }
+
+        window.addEventListener("scroll", reveal);
+    </script>
+
 </body>
+
 </html>
